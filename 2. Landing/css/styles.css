@@ -1,0 +1,443 @@
+:root {
+    /* colores */
+
+    --azul: #1058c4;
+    --negro: #000;
+    --blanco: #ffffff;
+
+    /* Fuente */
+    --principal: 'Montserrat', sans-serif;
+    ;
+
+    /* grosor */
+
+    --delgada: 300;
+    --norma: 400;
+    --bold: 700;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1 rem = 10 px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--principal);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Utilidades */
+
+
+.boton {
+    color: var(--blanco);
+    background-color: var(--azul);
+    padding: 1.2rem 3rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+
+
+}
+
+span {
+    color: var(--azul);
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 100%;
+    height: 70rem;
+    position: relative;
+
+}
+
+@media (min-width: 480px) {
+    .header {
+        flex-direction: row;
+    }
+}
+
+
+.hero {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--negro);
+    opacity: 70%;
+}
+
+.navegacion {
+    position: relative;
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: 480px) {
+    .navegacion {
+        flex-direction: row;
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo p {
+    padding: 0 2rem;
+    text-align: center;
+    color: var(--blanco);
+    font-size: 3rem;
+    background-color: var(--azul);
+    border-radius: .5rem;
+}
+
+.enlace {
+    margin-right: 2rem;
+    color: var(--blanco);
+
+}
+
+.enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media (min-width: 480px) {
+    .enlaces {
+        flex-direction: row;
+        margin: 0;
+    }
+}
+
+.enlace:hover {
+    cursor: pointer;
+    border-bottom: solid 1px var(--azul);
+}
+
+.header__texto {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    color: var(--blanco);
+    line-height: 1.2;
+}
+
+@media (min-width: 480px) {
+    .header__texto {
+        font-size: 5rem;
+        margin: 15rem 5rem;
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__texto {
+        font-size: 5rem;
+        margin: 15rem 5rem;
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header__texto {
+        font-size: 5rem;
+        margin: 15rem 5rem;
+        width: 50%;
+    }
+}
+.header__texto h1 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+
+@media (min-width: 480px) {
+    .header__texto h1 {
+        font-size: 5rem;
+    }
+}
+
+
+.header__texto p {
+    font-weight: var(--delgada);
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+
+}
+
+@media (min-width: 480px) {
+    .header__texto p {
+        font-size: 1.8rem;
+    }
+}
+
+
+.beneficios__conetenido {
+    width: 75%;
+    padding-bottom: 5rem;
+
+}
+
+.beneficios {
+    text-align: center;
+    padding-top: 5rem;
+
+
+}
+
+.titulo {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.texto {
+    font-weight: var(--delgada);
+    width: 70%;
+    margin: 0 auto 5rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0 auto;
+
+}
+
+@media (min-width: 480px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 5rem;
+    }
+}
+
+
+
+.grafico img {
+    width: 5rem;
+}
+
+.nombre {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.descripcion {
+    font-size: 1.2rem;
+}
+
+
+.principal {
+    background-color: #F2F2F3;
+    padding-top: 4rem;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+
+    
+}
+
+@media (min-width: 1200px) {
+    .producto {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "primera segunda"
+            "cuarta tercera";
+        gap: 2rem;
+        padding: 5rem;
+    }
+}
+
+
+
+.tarjeta__img img {
+    width: 30rem;
+}
+
+@media (min-width: 480px) {
+    .tarjeta__img img {
+        width: 50rem;
+    }
+}
+
+.primera {
+    grid-area: primera;
+
+}
+
+.segunda {
+    grid-area: segunda;
+}
+
+.primera,
+.segunda {
+    margin-bottom: 5rem;
+}
+
+.tercera {
+    grid-area: tercera;
+
+}
+
+.cuarta {
+    grid-area: cuarta;
+}
+
+.descripcion__tarjeta {
+    width: 90%;
+}
+
+.descripcion__tarjeta h3 {
+    font-size: 3rem;
+
+}
+
+.descripcion__tarjeta p {
+    margin-bottom: 3rem;
+}
+
+
+.contrata {
+    width: 100%;
+    height: 80rem;
+    background-image: url('../img/fotoFormulario.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 2rem;
+    display: block;
+
+}
+
+@media (min-width: 1200px) {
+    .contrata {
+        display: grid;
+        grid-template-columns: repeat(2, 60% 40%);
+        align-items: center;
+        height: 60rem;
+        width: 100%;
+        padding: 5rem;
+    }
+    
+}
+@media (min-width: 480px) {
+    .contrata h2{
+        font-size: 5rem;
+    }
+}
+
+.contrata h2 {
+    color: var(--blanco);
+    font-size: 3rem;
+    width: 90%;
+    text-align: center;
+}
+
+.contrata__formulario {
+
+    background-color: var(--negro);
+    opacity: 90%;
+    border-radius: 3rem;
+    padding: 5rem;
+}
+
+.contrata__formulario p {
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 480px) {
+    .contrata__formulario {
+       margin-bottom: 2rem;
+    }
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.input label {
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.input input {
+    border: none;
+    background-color: transparent;
+    border-bottom: var(--azul) solid 1px;
+    color: var(--azul);
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.formulario a {
+    margin-top: 2rem;
+}
+
+.footer {
+    background-color: var(--negro);
+    padding: 2rem 5rem;
+
+}
+
+.footer p {
+    color: var(--blanco);
+    text-align: center;
+    margin-top: 5rem;
+
+}
+
+.logo p {
+    margin: 0;
+}
+
