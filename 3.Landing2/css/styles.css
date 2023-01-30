@@ -1,0 +1,325 @@
+:root {
+
+    /* displays */
+    --mobile: 375px;
+
+    /* Colores */
+
+    --Cyan: hsl(171, 66%, 44%);
+    --Azul: hsl(233, 100%, 69%);
+    --titulos: hsl(210, 10%, 33%);
+    --letras: hsl(201, 11%, 66%);
+
+    /* Fuentes */
+    --principal: 'Bai Jamjuree', sans-serif;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1 rem = 10 px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--principal);
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    color: var(--letras);
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+.azul {
+    background-color: var(--Azul);
+}
+
+.cyan {
+    background-color: var(--Cyan);
+}
+
+.boton {
+    color: white;
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    border-radius: 5rem;
+    width: 100%;
+
+    -webkit-box-shadow: -2px 11px 22px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: -2px 11px 22px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: -2px 11px 22px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* header */
+
+.header {
+    background-image: url('../img/bg-header-mobile.png');
+    background-size: cover;
+    height: 60rem;
+
+}
+
+@media (min-width: 480px) {
+    .header {
+        background-image: url('../img/bg-header-desktop.png');
+    }
+}
+
+.header__contenido {
+    padding: 10rem 2rem;
+
+}
+
+.header__logo {
+    margin-bottom: 5rem;
+}
+
+.header__texto {
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 480px) {
+    .header__texto h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 480px) {
+    .header__texto p {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 480px) {
+    .header__contenido {
+        padding: 10rem 15rem;
+    }
+}
+
+.header__botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (min-width: 480px) {
+    .header__botones {
+        flex-direction: row;
+        width: 40%;
+        margin: 0 auto;
+
+    }
+}
+
+/* Caracteristicas */
+
+.caracteristica {
+    padding: 2rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.caracteristica h2 {
+    font-size: 3rem;
+}
+
+.caracteristica img {
+    width: 30rem;
+}
+
+@media (min-width: 480px) {
+
+    .caracteristica {
+        flex-direction: column;
+    }
+
+    .caracteristica__texto {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .caracteristica img {
+        width: 100%;
+        margin-left: -10rem;
+        flex-grow: 2;
+    }
+
+    .caracteritica__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .item {
+        text-align: left;
+        width: 70%;
+    }
+
+}
+
+.principal {
+    margin-top: 5rem;
+    padding: 2rem;
+}
+
+.principal__contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.principal__img img {
+    width: 30rem;
+}
+
+
+@media (min-width: 480px) {
+    .principal__texto {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .principal__img img {
+        width: 70%;
+    }
+
+}
+
+/* Flujo de trabajo */
+
+.flujo {
+    padding: 2rem;
+}
+
+.flujo__cards {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 480px) {
+    .flujo__cards {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10rem;
+    }
+
+    .card {
+        width: 30%;
+    }
+
+}
+
+/* Logos */
+
+.logos {
+    padding: 2rem;
+    margin-top: 10rem;
+}
+
+.logos__contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+@media (min-width: 480px) {
+    .logos__contenedor {
+        flex-direction: row;
+        gap: 8rem;
+    }
+}
+
+/* descarga */
+.descarga{
+    padding: 2rem;
+}
+
+.footer{
+    padding: 2rem;
+    background-color:rgb(241, 241, 241);
+}
+.footer__contenido{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.footer__logo img{
+    width: 10rem;
+}
+.footer__navegacion{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 2rem;
+}
+.footer__navegacion a{
+    color: var(--letras);
+}
+
+.footer__social{
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+}
+@media (min-width: 480px) {
+    .footer{
+        padding: 5rem;
+    }
+    .footer__logo img{
+        width: 5rem;
+    }
+    .footer__contenido{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .footer__navegacion{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        text-align: left;
+        margin: 0 auto;
+        font-size: 1.8rem;
+        
+    }
+}
