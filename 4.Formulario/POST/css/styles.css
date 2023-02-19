@@ -1,0 +1,616 @@
+/* Variables */
+:root {
+
+    /* Fuentes */
+    --titulos: 'Montserrat Alternates', sans-serif;
+    --principal: 'Montserrat', sans-serif;
+
+    /* Colores */
+
+    --fondo: #313155;
+    --fondoCard: #3F414D;
+    --ctitulos: #24dbdb;
+    --blanco: #fff;
+}
+
+
+
+/* Formateo de la pagina */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1 rem = 10 px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    background-image: url('../img/bg.png');
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: var(--principal);
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(0 0 0 / .5);
+}
+
+.contenido {
+
+    width: 85%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 40% 60%);
+
+}
+
+.portada {
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+}
+
+.hero2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(0 0 0 / 0.6);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+}
+
+.contenido {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 2rem;
+}
+
+.texto {
+    position: relative;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+span {
+    color: var(--ctitulos);
+    font-weight: 600;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+    font-size: 2rem;
+    gap: 2rem;
+    color: var(--ctitulos);
+    font-weight: 600;
+    font-family: var(--titulos);
+}
+
+.logo img {
+    width: 8rem;
+}
+
+.texto_principal {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--blanco);
+    margin-top: -10rem;
+
+}
+
+.autor {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.formulario {
+    padding: 3rem;
+
+}
+
+.formulario h2 {
+    color: var(--ctitulos);
+    font-family: var(--titulos);
+    font-size: 2.5rem;
+
+}
+
+.from {
+
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1rf);
+    grid-template-areas: 'nombre email'
+        'sexo fecha'
+        'carrera carrera'
+        'conocimiento conocimiento'
+        'comentario comentario'
+        ' foto foto'
+        'botones botones';
+    gap: 1rem;
+    align-items: center;
+    align-self: center;
+}
+
+.nombre {
+    grid-area: nombre;
+}
+
+.email {
+    grid-area: email;
+}
+
+.sexo {
+    grid-area: sexo;
+}
+
+.nacimiento {
+    grid-area: fecha;
+}
+
+.conocimiento {
+    grid-area: conocimiento;
+}
+
+.carrera {
+    grid-area: carrera;
+}
+
+.comentario {
+    grid-area: comentario;
+}
+
+.foto {
+    grid-area: foto;
+}
+
+.botones {
+    grid-area: botones;
+}
+
+label {
+    font-size: 1.8rem;
+    color: var(--blanco);
+    font-family: var(--titulos);
+
+}
+
+input {
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 2px solid var(--ctitulos);
+    font-size: 1.2rem;
+}
+
+input::placeholder {
+    color: var(--blanco);
+}
+
+input:focus {
+    outline: none;
+    border: 1px var(--ctitulos) solid;
+}
+
+.nombre input,
+.email input {
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+.nombre,
+.email,
+.carrera,
+.comentario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sexo p,
+.conocimiento p {
+
+    color: var(--blanco);
+    font-family: var(--titulos);
+    font-size: 1.8rem;
+
+
+}
+
+.sexo label {
+
+    font-size: 1.8rem;
+    margin-right: 2rem;
+    font-family: var(--principal);
+}
+
+
+.radio-container {
+    box-sizing: border-box;
+
+    color: #222;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.radio-container * {
+    box-sizing: border-box;
+}
+
+.radio-input {
+    appearance: none;
+
+    width: 16px;
+    height: 16px;
+    border: 1px solid #cccfdb;
+    margin: 0;
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.radio-input::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.3s transform ease-in-out;
+    box-shadow: inset 6px 6px #ffffff;
+}
+
+.radio-input:checked {
+    background: #0077ff;
+    border-color: #0077ff;
+}
+
+.radio-input:checked::before {
+    transform: scale(1);
+}
+
+.radio {
+    cursor: pointer;
+    padding: 6px 8px;
+}
+
+.radio:not(:last-child) {
+    margin-right: 6px;
+}
+
+.carrera select {
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 1.5rem;
+    border-style: none;
+    border-bottom: var(--ctitulos) 1px solid;
+
+}
+
+.carrera option {
+    color: black;
+}
+
+.opciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.checkbox-symbol {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+.checkbox-container {
+    box-sizing: border-box;
+    background: transparent;
+    color: #222;
+    height: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-flow: row wrap;
+}
+
+.checkbox-container * {
+    box-sizing: border-box;
+}
+
+.checkbox-input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.checkbox {
+    user-select: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+}
+
+.checkbox:not(:last-child) {
+    margin-right: 6px;
+}
+
+.checkbox:hover {
+    background: rgba(0, 119, 255, 0.06);
+}
+
+.checkbox span {
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox span:first-child {
+    position: relative;
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    transform: scale(1);
+    border: 1px solid #cccfdb;
+    transition: all 0.3s ease;
+}
+
+.checkbox span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox span:last-child {
+    padding-left: 8px;
+    line-height: 18px;
+}
+
+.checkbox:hover span:first-child {
+    border-color: #0077ff;
+}
+
+.checkbox-input:checked+.checkbox span:first-child {
+    background: #0077ff;
+    border-color: #0077ff;
+    animation: zoom-in-out 0.3s ease;
+}
+
+.checkbox-input:checked+.checkbox span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+@keyframes zoom-in-out {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+label span {
+    font-family: var(--principal);
+}
+
+.nacimiento {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nacimiento input {
+    color: var(--blanco);
+    font-size: 1.8rem;
+}
+
+textarea {
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 1.5rem;
+}
+
+textarea::placeholder {
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+.foto {
+    display: flex;
+    gap: 2rem;
+}
+
+.foto input {
+    color: var(--blanco);
+    font-size: 1.2rem;
+    border: none;
+}
+
+.botones {
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-end;
+}
+
+.enviar {
+    background-color: var(--ctitulos);
+    font-weight: 600;
+}
+
+.enviar:hover {
+    background-color: #0077ff;
+    border: #0077ff solid 1px;
+    cursor: pointer;
+}
+
+.limpiar {
+    border: 1px solid var(--ctitulos);
+}
+
+.limpiar:hover {
+    background-color: #0077ff;
+    border: #0077ff solid 1px;
+    cursor: pointer;
+}
+
+.boton {
+    padding: .5rem;
+    width: 20rem;
+
+    font-size: 2rem;
+    color: var(--blanco);
+    border-radius: 1.2rem;
+}
+
+
+/* Presentacion */
+
+.card {
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.52);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(0, 0, 0, 0.48);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+.perfil{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: var(--blanco);
+    border: 5px solid var(--ctitulos);
+    margin: -10rem auto ;
+   
+}
+.perfil img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+
+.perfil__texto{
+    margin-top: 10rem;
+}
+.nombreFin{
+    color: var(--blanco);
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: var(--titulos);
+}
+.carreraFin{
+    color: var(--ctitulos);
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: var(--titulos);
+   
+}
+.sobre{
+    width: 70%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--blanco);
+    margin-top: 2.5rem;
+    font-weight: 300;
+}
+.sobre h2, .skill h2{
+    font-size: 3rem;    
+    margin-bottom: 2rem;
+    font-family: var(--titulos);
+}
+
+hr{
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: .5px solid var(--ctitulos);
+    margin-top: 1rem;
+}
+
+.datos{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: var(--blanco);
+    font-size: 1.3rem;
+    gap: 2rem;
+}
+.datos img{
+    margin-right: .5rem;
+}
+
+.skill{
+    color: var(--blanco);
+    margin-top: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    
+   
+}
+.skills{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    font-size: 1.8rem;
+    align-self: center;
+    color: var(--ctitulos);
+    width: 10rem;
+}
